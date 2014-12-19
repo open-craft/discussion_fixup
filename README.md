@@ -7,7 +7,7 @@ Discussion resoration instruction:
 5. Modify constants in attached `fix_discussion.py` so that they contain correct credentials, server address and database names for edxapp and comments service databases
 6. Run `fix_discussions.py`. It uses pymongo to connect to DB, so make sure it's run in an environment with installed pymongo. Simpliest way would be to use edxapp virtualenv.
 
-This restores all the discussions that can be restored automatically. However, since latest backup is slightly outdated, some discussions are likely have been added after the backup. Those will likely miss discussion_ids and won't be restored by the script. Use attached 'missing_discussion_ids.js' and `orphan_comment_threads.js` to get discussions and comment threads that are still broken, and manually match them.
+This restores all the discussions that can be restored automatically. However, since latest backup is slightly outdated, some discussions are likely have been added after the backup. Those will likely miss discussion_ids and won't be restored by the script. Use attached `missing_discussion_ids.js` and `orphan_comment_threads.js` to get discussions and comment threads that are still broken, and manually match them.
 
 The following script might be useful for manual updates:
 
