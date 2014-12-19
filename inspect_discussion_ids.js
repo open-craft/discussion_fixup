@@ -72,7 +72,7 @@ function process_course(course_spec){
     for (var i=0; i < dmap.length; i++) {
         var discussion = dmap[i];
         print("Fixing discussion id for " + discussion.name + ": Setting discussion_id to " + discussion.discussion_id);
-        var update_status = update_discussion_id(to_ORG, course_num, discussion.name, discussion.discussion_id);
+        var update_status = update_discussion_id(course_spec.to_ORG, course_spec.course_num, discussion.name, discussion.discussion_id);
         
         success_updates += update_status.count;
         if (fail_fast && !update_status.success) {
